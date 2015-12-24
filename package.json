@@ -24,10 +24,10 @@
   "homepage": "https://github.com/AlexisTessier/report#readme",
   "devDependencies": {
     "@alexistessier/gulp-workflow-common-task": "^2.1.0",
-    "coveralls": "^2.11.6",
-    "lodash": "^3.10.1"
+    "coveralls": "^2.11.6"
   },
   "dependencies": {
+    "lodash": "^3.10.1",
     "chalk": "^1.1.1"
   }
 }

@@ -2,8 +2,6 @@
 
 var assert = require('assert');
 
-var _ = require('lodash');
-
 var report = require('../index');
 
 function test(spec) {
@@ -15,7 +13,7 @@ function test(spec) {
 
 var mock = {
 	transformPrefix: 'mock => ',
-	transformDictionary: _.assign(_.cloneDeep(report.transformDictionary), {
+	transformDictionary: report.extendsTransformDictionary({
 		mock:function(msg) {
 			return mock.transformPrefix+msg;
 		}
@@ -45,6 +43,9 @@ assert(typeof report === 'function', spec);
 spec = test('report.factory is a function');
 assert(typeof report.factory === 'function', spec);
 
+spec = test('report.extendsTransformDictionary is a function');
+assert(typeof report.extendsTransformDictionary === 'function', spec);
+
 spec = test('report.transformDictionary is an object');
 assert(typeof report.transformDictionary === 'object', spec);
 
@@ -59,7 +60,7 @@ assert(Object.is(report.console, console), spec);
 
 /*----------------------*/
 
-spec = test('report.factory allow to override the transformDictionary')
+spec = test('report.factory allows to override the transformDictionary')
 var testReport = report.factory({
 	transformDictionary: mock.transformDictionary,
 	console: mock.console
@@ -91,9 +92,24 @@ assert(mock.console.lastLog === reportLog , spec+' (mock unvalid transform)');
 
 /*------------------------*/
 
-spec = test('report.factory allow to override the output')
+spec = test('report.factory allows to override the output')
 var testReport2 = report.factory(mock);
 
 reportLog = 'report log mock output';
 testReport2('mock', reportLog);
 assert(mock.console.lastLog === (mock.outputWritePrefix+mock.transformPrefix+reportLog), spec+' (mock transform)');
+
+/*------------------------*/
+
+spec = test('report.extends is a function');
+assert(typeof report.extends === 'function', spec);
+
+spec = test('report.extends allows to extend a reporter');
+var testReport3 = report.extends(mock);
+assert(Object.is(testReport3.transformDictionary, mock.transformDictionary), spec);
+assert(Object.is(testReport3.output, mock.output), spec);
+assert(Object.is(testReport3.console, mock.console), spec);
+var testReport4 = report.extends();
+assert(Object.is(testReport4.transformDictionary, report.transformDictionary), spec);
+assert(Object.is(testReport4.output, report.output), spec);
+assert(Object.is(testReport4.console, report.console), spec);
