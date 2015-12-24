@@ -1,0 +1,33 @@
+{
+  "name": "@alexistessier/report",
+  "version": "1.0.0",
+  "description": "A tiny report method, and a factory to create custom report methods",
+  "main": "index.js",
+  "scripts": {
+    "test": "dependency-check package.json & istanbul cover test/index.js",
+    "build": "gulp",
+    "prepublish": "npm run build & npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexisTessier/report.git"
+  },
+  "keywords": [
+    "report",
+    "log"
+  ],
+  "author": "Alexis Tessier <alexis.tessier@designdo.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexisTessier/report/issues"
+  },
+  "homepage": "https://github.com/AlexisTessier/report#readme",
+  "devDependencies": {
+    "@alexistessier/gulp-workflow-common-task": "^2.1.0",
+    "coveralls": "^2.11.6",
+    "lodash": "^3.10.1"
+  },
+  "dependencies": {
+    "chalk": "^1.1.1"
+  }
+}

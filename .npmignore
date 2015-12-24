@@ -1,0 +1,7 @@
+coverage
+README.mustache
+gulpfile.js
+.travis.yml
+
+logs
+*.log
