@@ -1,6 +1,6 @@
 {
   "name": "@alexistessier/report",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A tiny report method, and a factory to create custom report methods",
   "main": "index.js",
   "scripts": {
