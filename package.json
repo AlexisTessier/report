@@ -1,6 +1,6 @@
 {
   "name": "@alexistessier/report",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A tiny report method, and a factory to create custom report methods",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "chalk": "^1.1.1",
+    "is-stream": "^1.1.0",
     "lodash": "^4.1.0"
   }
 }
