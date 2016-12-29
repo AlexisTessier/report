@@ -68,19 +68,19 @@ var testReport = report.factory({
 
 reportLog = 'report log success';
 testReport('success', reportLog);
-assert(mock.console.lastLog.indexOf(reportLog) > 0 , spec+' (success transform)');
+assert(mock.console.lastLog.indexOf(reportLog) >= 0 , spec+' (success transform)');
 
 reportLog = 'report log notice';
 testReport('notice', reportLog);
-assert(mock.console.lastLog.indexOf(reportLog) > 0 , spec+' (notice transform)');
+assert(mock.console.lastLog.indexOf(reportLog) >= 0 , spec+' (notice transform)');
 
 reportLog = 'report log error';
 testReport('error', reportLog);
-assert(mock.console.lastLog.indexOf(reportLog) > 0 , spec+' (error transform)');
+assert(mock.console.lastLog.indexOf(reportLog) >= 0 , spec+' (error transform)');
 
 reportLog = 'report log warning';
 testReport('warning', reportLog);
-assert(mock.console.lastLog.indexOf(reportLog) > 0 , spec+' (warning transform)');
+assert(mock.console.lastLog.indexOf(reportLog) >= 0 , spec+' (warning transform)');
 
 reportLog = 'report log mock';
 testReport('mock', reportLog);
