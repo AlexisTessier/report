@@ -1,6 +1,6 @@
 {
   "name": "@alexistessier/report",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A tiny report method, and a factory to create custom report methods",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,9 @@
   "homepage": "https://github.com/AlexisTessier/report#readme",
   "devDependencies": {
     "@alexistessier/gulp-workflow-common-task": "2.1.4",
-    "coveralls": "2.11.15"
+    "coveralls": "2.11.15",
+    "dependency-check": "3.3.0",
+    "istanbul": "0.4.5"
   },
   "dependencies": {
     "chalk": "1.1.3",
