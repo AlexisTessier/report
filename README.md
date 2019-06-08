@@ -1,7 +1,11 @@
 @alexistessier/report
 ================
 
-[![version](https://img.shields.io/badge/version-1.0.5-blue.svg)](https://github.com/AlexisTessier/report#readme)
+⚠️ Deprecated - Not maintained
+
+[Use js logger instead](https://www.npmjs.com/package/js-logger)
+
+[![version](https://img.shields.io/badge/version-1.0.6-blue.svg)](https://github.com/AlexisTessier/report#readme)
 [![npm version](https://badge.fury.io/js/%40alexistessier%2Freport.svg)](https://badge.fury.io/js/%40alexistessier%2Freport)
 
 [![Build Status](https://travis-ci.org/AlexisTessier/report.svg?branch=master)](https://travis-ci.org/AlexisTessier/report)
